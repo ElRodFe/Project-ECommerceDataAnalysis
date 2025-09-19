@@ -22,8 +22,9 @@
 
 # Useful Websites
 
+- [Pandas Documentation](https://pandas.pydata.org/docs/)
 - [What is pandas?](https://www.youtube.com/watch?v=dcqPhpY7tWk)
-- [Web Site Name](http://url.link.goes.here)
+- [Exploratory DataAnalysis project](https://www.youtube.com/watch?v=4sZFkPw87ng)
 
 # Future Work
 
