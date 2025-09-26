@@ -10,6 +10,12 @@
 
 [Software Demo Video](http://youtube.link.goes.here)
 
+# Analysis Questions
+
+Which categories bring the most revenue?
+
+What is the most profitable month?
+
 # Data Analysis Results
 
 {List the questions and the answers you found by doing this analysis.}

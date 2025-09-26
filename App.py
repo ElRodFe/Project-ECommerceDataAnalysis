@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 #Create DataFrame and get the shape of it (uncomment the print for visualization)
 df = pd.read_csv("data/amazonSalesReport.csv")
@@ -59,3 +60,43 @@ df = df.rename(columns = {"ship-service-level": "Ship_service_level",
 df = df[["Date", "Status", "Fulfilment", "Amount", "Category", "Size", "Courier_status", "Ship_service_level"]]
 
 
+    #### Analysis ####
+#### 1. Which categories bring the most revenue? ####
+revenue_by_category = df.groupby("Category")["Amount"].sum().sort_values(ascending=False)
+
+print("Revenue by category:")
+print(revenue_by_category)
+print()
+
+#Graph
+plt.figure(figsize=(10,6))
+sns.barplot(
+    x=revenue_by_category.values, 
+    y=revenue_by_category.index, 
+    hue=revenue_by_category.index,
+    dodge=False, legend=False, 
+    palette="viridis"
+)
+plt.title("Revenue by Category")
+plt.xlabel("Total Revenue")
+plt.ylabel("Category")
+plt.show()
+
+#### 2. What is the most profitable month= ####
+df["Date"] = pd.to_datetime(df["Date"], errors="coerce") #Convert Date to datetime
+df["Month"] = df["Date"].dt.strftime("%m-%Y") #Extract month - year
+
+revenue_by_month = df.groupby("Month")["Amount"].sum().sort_values(ascending=False)
+
+print("Revenue by Month:")
+print(revenue_by_month)
+print()
+print(f"Most profitable month is {revenue_by_month.idxmax()}, with a revenue of {revenue_by_month.max()}")
+
+#Graph
+plt.figure(figsize=(10,6))
+revenue_by_month.sort_index().plot(kind="line", marker="o")
+plt.title("Monthly Revenue Trend")
+plt.xlabel("Month")
+plt.ylabel("Total Revenue")
+plt.show()
