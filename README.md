@@ -1,30 +1,32 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This project analyzes Amazon sales data to identify trends and insights that can help improve business decision-making. The dataset contains detailed sales transaction records, including order details, product categories, fulfillment methods, shipping information, and amounts.
 
-{Provide a description of the data set that you are analyzing. Include the link of where you obtained the data.}
+The dataset used in this analysis comes from **Kaggle**: [Amazon Sales Report](https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data).
 
-{Describe your purpose for writing this software to analyze the data.}
-
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the data set, the questions and answers, the code running and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+The purpose of this software is to clean and prepare the dataset, then answer specific business-related questions such as revenue distribution by category and identifying the most profitable month. By automating the cleaning and analysis process, the program demonstrates how raw sales data can be transformed into actionable insights.
 
 # Analysis Questions
 
-Which categories bring the most revenue?
-
-What is the most profitable month?
+- Which categories bring the most revenue?
+- What is the most profitable month?
 
 # Data Analysis Results
 
-{List the questions and the answers you found by doing this analysis.}
+- **Which categories bring the most revenue?**  
+  The analysis showed that certain categories consistently generate the highest sales revenue. For example, Set Category and Kurta Category have the highest revenue with ₹ 37662424.0 and ₹ 20452141.0 Indian Rupee income respectively
+
+- **What is the most profitable month?**  
+  The revenue trends revealed that the most profitable month was April 2022, with a total revenue of ₹27581851.0 Indian Rupee.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+- **Tools:** Visual Studio Code, Python environment
+- **Programming Language:** Python 3
+- **Libraries Used:**
+  - `pandas` for data cleaning and manipulation
+  - `numpy` for numerical operations
+  - `seaborn` and `matplotlib` for visualizations
 
 # Useful Websites
 
@@ -34,8 +36,7 @@ What is the most profitable month?
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
+- Add more complex analysis, such as profit margins, regional performance, and customer behavior.
+- Improve visualizations with clearer formatting and interactive plots (e.g., using Plotly).
+- Automate report generation into PDF/HTML for easier sharing.
+- Incorporate machine learning models to forecast sales trends.

@@ -82,7 +82,7 @@ plt.xlabel("Total Revenue")
 plt.ylabel("Category")
 plt.show()
 
-#### 2. What is the most profitable month= ####
+#### 2. What is the most profitable month ####
 df["Date"] = pd.to_datetime(df["Date"], errors="coerce") #Convert Date to datetime
 df["Month"] = df["Date"].dt.strftime("%m-%Y") #Extract month - year
 
